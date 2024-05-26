@@ -1,36 +1,34 @@
 import Image from "next/image"
- 
+import Link from "next/link"
+
 export default function Navbar() {
-  return (
-    <header className="">
-<div className="sticky container px-4 sm:px-6 lg:px-">
-    <div className=" sticky flex flex-row items-center justify-between">
-        {/* image */}
-        <div className="mt-1 mb-3">
-            <a href="/" title="" className="outline-none">
-                <Image width={200} height={800} src="img/logo.svg" alt="" />
-            </a>
-        </div>
-        {/* navbar list */}
-        <div className="hidden lg:flex lg:ml-16 basis-1/2 gap-20 lg:mt-2 lg:items-center lg:justify-center lg:space-x-28">
-        <a href="#" title="" className=" text-xl font-bold text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Home </a>
+    return (
+        <nav className="">
+            <div className="sm:container sm:mx-auto px-4 py-2 flex items-center justify-evenly sm:justify-between">
+                {/* Logo */}
+                <div className="basis-[68%] sm:basis-1/4 flex-shrink-0">
+                    <Image src="img/logo.svg" alt="Logo" width={160} height={160} />
+                </div>
+                <div className="flex items-center justify-center rounded-xl px-1 shadow-md md:hidden w-12 h-12">
+                <Image src="img/burger.svg" width={30} height={30} alt="" />
 
-<a href="#" title="" className="text-xl font-bold text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Contact </a>
+                </div>
+                {/* Links */}
+                <div className="hidden md:flex basis-1/2 space-x-12 gap-12 mx-auto">
 
-<a href="#" title="" className="text-xl font-bold text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> About Us </a>
-        </div>
-        {/* navbar socials */}
+                    <a className="hover:text-gray-300 font-extrabold text-xl">Home</a>
+                    <a className="hover:text-gray-300 font-extrabold text-xl">Contact</a>
+                    <a className="hover:text-gray-300 font-extrabold text-xl">About</a>
 
-        <div className="hidden lg:flex basis-1/12 mt-4 z-40 lg:-mr-40">
-            <a href=""><Image src="img/ig.svg" width="57" height="57" alt="" /></a>
-            <a href=""> <Image src="img/fb.svg" width="57" height="57" alt="" /> </a>
-            <a href="">  <Image src="img/snapchat.svg" width="57" height="57" alt="" /></a>
-        </div>
-    </div>
-
-</div>
-    </header>
-  )
+                </div>
+                {/* Social Icons */}
+                <div className=" basis-1 hidden md:flex space-x-4 z-40 ml-auto">
+                    <Image src="img/fb.svg" width={40} height={40} alt="" />
+                    <Image src="img/ig.svg" width={40} height={40} alt="" />
+                    <Image src="img/snapchat.svg" width={40} height={40} alt="" />
+                </div>
+            </div>
+        </nav>
+    )
 }
 
- 
