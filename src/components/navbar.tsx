@@ -17,7 +17,7 @@ export default function Navbar() {
                 <div className="hidden md:flex basis-1/2 space-x-12 gap-12 mx-auto">
 
                     <a className="hover:text-gray-300 font-extrabold text-xl">Home</a>
-                    <a className="hover:text-gray-300 font-extrabold text-xl">${process.env.NEXT_PUBLIC_CIB}</a>
+                    <a className="hover:text-gray-300 font-extrabold text-xl">{process.env.NEXT_PUBLIC_CIB}</a>
                     <a className="hover:text-gray-300 font-extrabold text-xl">About</a>
 
                 </div>
