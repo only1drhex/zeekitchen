@@ -1,4 +1,4 @@
-// This file uses SSR by default since it's in the App Router and not marked "use client"
+export const fetchCache = 'force-no-store';
 
 export default function SSRTestPage() {
   const timestamp = new Date().toISOString();
