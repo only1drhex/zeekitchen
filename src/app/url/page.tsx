@@ -1,21 +1,13 @@
+// This file uses SSR by default since it's in the App Router and not marked "use client"
 
+export default function SSRTestPage() {
+  const timestamp = new Date().toISOString();
 
-export default function SSRTest({ message, timestamp }) {
-
-   const timestamp = new Date().toISOString();
-
-  const obj = {
-    props: {
-      message: "This page was rendered on the server",
-      timestamp,
-    },
-  };
-}
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h1>SSR Test</h1>
-      <p>{obj.props.message}</p>
-      <p>Server Time: {obj.props.timestamp}</p>
+      <p>This page was rendered on the server.</p>
+      <p>Timestamp: {timestamp}</p>
     </div>
   );
 }
