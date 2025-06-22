@@ -1,6 +1,10 @@
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
+"use server"
 import Link from "next/link"
 export default function Page() {
+
+
+const hd = "server side tedting" + 123;
   return (
     <div className="overflow-x-hidden bg-gray-50">
     <header className="py-4 md:py-6" x-data="{expanded: false}">
@@ -37,7 +41,7 @@ export default function Page() {
                 </div>
 
                 <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-10">
-                    <a href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Customer Login </a>
+                    <a href="#" title="" className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Customer {hd}</a>
 
                     <a
                         href="#"
